@@ -1,0 +1,5 @@
+SELECT stay, COUNT(inter_dom) AS count_int, ROUND(AVG(todep), 2) AS todep, ROUND(AVG(tosc), 2) AS tosc, ROUND(AVG(toas), 2) AS toas
+FROM Various.dbo.students
+WHERE stay IS NOT NULL
+GROUP BY stay
+ORDER BY stay DESC;
